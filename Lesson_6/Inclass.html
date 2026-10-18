@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script src=""></script>
+    </head>
+    <body>
+        <p id="abc">Chưa có gì!</p>
+        <script>
+
+            // oop
+            // const toi = {
+            //     name: lieudat,
+            //     age: 20
+            // }
+            
+            // // oop vipro
+            // function Student(name, age) {
+            //     this.name = name;
+            //     this.age = age;
+            // }
+            // const Dat = new Student("Dat", 20);
+            
+            // Object sẵn: Math, Date, ...
+
+            // BOM: alert, cofirm, prompt - trên web
+            let ten = prompt("tên bạn là:"); // hiển thị có ô nhập
+            alert("Chào " + ten + " nhé") // hiển thị thông báo
+
+            let chao = confirm("Chào nhé");
+            if(chao) {
+                alert("hii");
+            } else {
+                alert("cuttt");
+            }
+
+            // '...' ?
+
+            // var w2 = window.open('http://www.w3schools.com');  // mở cửa sổ mới, đặt tên biến là w2
+            // w2.close();                                          // đóng cửa sổ đó
+            // Math
+            const s = [7,8,9]
+            console.log(Math.max(s)) // NaN
+            console.log(Math.max(...s)) // 9
+            
+            // .querySelector() giống .getElementById
+            document.getElementById("name"); // không cần # vì đã tìm Id
+            document.querySelector("#name"); // cần #
+
+            event.preventDefault(); // ngăn reload khi submit
+            const number = anc.split(" + ") // "3 + 4 + 5"    ->   3, 4, 5 //nằm trong vòng lặp, mỗi lần nhận 1 số
+
+        </script>
+    </body>
+</html>

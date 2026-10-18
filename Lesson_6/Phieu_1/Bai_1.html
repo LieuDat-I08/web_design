@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <table border="1" cellspacing="0" align="center" width="25%" style="background-color: pink;">
+            <tr>
+                <td colspan="2">Chương trình tra tuổi</td>
+            </tr>
+            <tr>
+                <td>Tuổi dương lịch</td>
+                <td><input type="text" id="duong" name="tuoiDuong"></td>
+            </tr>
+            <tr>
+                <td>Tuổi âm lịch</td>
+                <td><input type="text" id="am" name="tuoiAm" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="Xóa" onclick='xoa()'>
+                    <input type="button" value="Tra Cứu" onclick='tra()'>
+                </td>
+            </tr>
+        </table>
+        <script>
+            let can=['Canh','Tân','Nhâm','Quí','Giáp','Ất','Bính','Đinh','Mậu','Kỷ'];
+            let chi=['Thân','Dậu','Tuất','Hợi','Tý','Sửu','Dần','Mão','Thìn','Tỵ','Ngọ','Mùi']
+            function tra() {
+                let tuoi=parseInt(document.getElementById('duong').value);
+                if(isNaN(tuoi)) {
+                    alert("Hãy nhập tuổi hợp lệ!!!");
+                    return;
+                }
+                let nam = new Date().getFullYear() - tuoi;
+                document.getElementById("am").value = can[nam%10] + ' ' + chi[nam%12];
+            }
+            function xoa() {
+                document.getElementById("duong").value='';
+                document.getElementById("am").value='';
+            }
+        </script>
+    </body>
+</html>

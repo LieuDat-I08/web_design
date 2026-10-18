@@ -1,0 +1,19 @@
+h1 {
+    color: green;
+    text-align:center;
+    font-weight:bolder;
+}
+#css { /* '#' la id, ap dung cho 1 cai, o day ten id la 'css'*/
+    color:red !important /* !important se duoc uu tien*/
+}
+.web { /* '.' la class, ap dung cho nhieu cai, o day ten class la 'web'*/
+    color:blue
+}
+* { /* '*' la universal ap dung cho toan bo web*/
+    padding:0;
+    margin:0;
+}
+#head {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:24px;
+}

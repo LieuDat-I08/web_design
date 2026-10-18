@@ -1,0 +1,27 @@
+h1 {
+    background-color:#FECFFD;
+    color:#FF3399;
+    text-align:center;
+}
+#rieng {
+    background-color:white;
+    color:white;
+}
+.doan1 {
+    text-align:center;
+    color:blue;
+    font-style:italic;
+}
+.doan2 {
+    text-align:center;
+    color:red;
+    font-style:italic;
+}
+.doan3 {
+    text-align:center;
+    color:green;
+    font-style:italic;
+}
+* {
+    background-color:#FFFFCC
+}

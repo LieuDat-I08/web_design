@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Giải phương trình</h1>
+        <h3>4x<sup>2</sup> + 6x + 2 = 0</h3>
+        <p id="ketQua"></p>
+        <script>
+            function giaiPT(a, b, c) {
+                if(a===0) {
+                    if(b===0) {
+                        return c===0 ? "Vô số nghiệm" : "Vô nghiệm";
+                    }
+                }
+                let delta = b*b - 4*a*c;
+                if (delta<0) {
+                    return "Phương trình vô nghiệm";
+                }
+                if (delta=0) {
+                    return "Nghiệm kép x1 = x2 = " + (-b/(2*a));
+                }
+                let x1=(-b + Math.sqrt(delta))/(2*a);
+                let x2=(-b - Math.sqrt(delta))/(2*a);
+                return "x1 = " + x1 + "; x2 = " + x2;
+            }
+            // let a=4, b=6, c=2;
+            let a, b, c;
+            a=Number(prompt("Nhập a:"));
+            b=Number(prompt("Nhập b:"));
+            c=Number(prompt("Nhập c:"));
+            document.getElementById("ketQua").innerHTML = giaiPT(a,b,c);
+        </script>
+    </body>
+</html>

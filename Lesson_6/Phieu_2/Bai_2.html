@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body align="center">
+        <input type="text" id="hien" name="ketqua">
+        <br>
+        <input type="button" value="1" onclick="nhap(this.value)">
+        <input type="button" value="2" onclick="nhap(this.value)">
+        <input type="button" value="3" onclick="nhap(this.value)">
+        <input type="button" value="4" onclick="nhap(this.value)">
+        <input type="button" value="5" onclick="nhap(this.value)">
+        <input type="button" value="-" onclick="tru()">
+        <br>
+        <input type="button" value="6" onclick="nhap(this.value)">
+        <input type="button" value="7" onclick="nhap(this.value)">
+        <input type="button" value="8" onclick="nhap(this.value)">
+        <input type="button" value="9" onclick="nhap(this.value)">
+        <input type="button" value="0" onclick="nhap(this.value)">
+        <input type="button" value="=" onclick="bang()">
+
+        <script>
+            let so1, so2;
+            function nhap(a) {
+                document.getElementById("hien").value += a;
+            }
+            function tru() {
+                so1 = Number(document.getElementById("hien").value);
+                document.getElementById("hien").value = '';
+            }
+            function bang() {
+                so2 = Number(document.getElementById("hien").value);
+                document.getElementById("hien").value = so1 - so2;
+            }
+        </script>
+    </body>
+</html>

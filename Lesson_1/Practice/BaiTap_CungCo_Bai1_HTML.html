@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Bài tập củng cố - Bài 1: Các thẻ HTML cơ bản</title>
+<style>
+  body{font-family:Segoe UI, Arial, sans-serif; max-width:960px; margin:0 auto; padding:20px; background:#f4f6f9; color:#222;}
+  h1{text-align:center; color:#0b3d66; border-bottom:3px solid #0b3d66; padding-bottom:10px;}
+  h2{color:#fff; background:#0b6ea8; padding:8px 14px; border-radius:6px; margin-top:40px;}
+  .exercise{background:#fff; border:1px solid #ddd; border-radius:8px; padding:18px 22px; margin:18px 0; box-shadow:0 2px 4px rgba(0,0,0,.05);}
+  .yc{font-weight:bold; color:#b02a37;}
+  .goal{color:#555; font-style:italic; margin-top:4px;}
+  details{margin-top:12px;}
+  summary{cursor:pointer; font-weight:bold; color:#0b6ea8; padding:8px; background:#eaf4fb; border-radius:6px;}
+  summary:hover{background:#d6ecfb;}
+  pre{background:#1e1e1e; color:#d4d4d4; padding:14px; border-radius:6px; overflow-x:auto; font-size:14px; line-height:1.5;}
+  .result{border:1px dashed #999; padding:12px; margin-top:10px; background:#fafafa; border-radius:6px;}
+  .tag{background:#0b6ea8; color:#fff; font-size:12px; padding:2px 8px; border-radius:10px; margin-left:8px;}
+  .level{font-size:13px; color:#777;}
+  code{background:#eee; padding:1px 5px; border-radius:4px;}
+  table.demo{border-collapse:collapse; width:100%;}
+  table.demo td, table.demo th{border:1px solid #333; padding:6px 10px; text-align:center;}
+</style>
+</head>
+<body>
+
+<h1>PHIẾU BÀI TẬP CỦNG CỐ - BÀI 1<br><span style="font-size:18px;color:#555;">Các thẻ HTML cơ bản, chèn bảng, âm thanh và video</span></h1>
+<p style="text-align:center;color:#666;">Mỗi bài đều có gợi ý yêu cầu và đáp án mẫu (bấm vào "Xem đáp án" để mở). Hãy tự làm trước khi xem đáp án nhé!</p>
+
+<h2>PHẦN A - CỦNG CỐ KIẾN THỨC CƠ BẢN</h2>
+
+<div class="exercise">
+  <b>Bài A1.</b> Tạo trang HTML có tiêu đề trang (title) là "Trang cá nhân", bên trong có 1 thẻ <code>&lt;h1&gt;</code> chứa họ tên của bạn, một thẻ <code>&lt;h3&gt;</code> ghi "Sở thích", và 3 sở thích được trình bày dạng danh sách không thứ tự (dấu chấm vuông - square). Lưu tên tệp là <code>CaNhan.html</code>.
+  <div class="goal">Mục tiêu: luyện cấu trúc tài liệu HTML, thẻ heading, thẻ <code>&lt;ul&gt;</code>/<code>&lt;li&gt;</code>.</div>
+  <details>
+    <summary>Xem đáp án</summary>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Trang cá nhân&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Nguyễn Văn A&lt;/h1&gt;
+  &lt;h3&gt;Sở thích&lt;/h3&gt;
+  &lt;ul type="square"&gt;
+    &lt;li&gt;Đọc sách&lt;/li&gt;
+    &lt;li&gt;Chơi bóng đá&lt;/li&gt;
+    &lt;li&gt;Nghe nhạc&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    <div class="result">
+      <h1 style="margin:0">Nguyễn Văn A</h1>
+      <h3>Sở thích</h3>
+      <ul style="list-style-type:square"><li>Đọc sách</li><li>Chơi bóng đá</li><li>Nghe nhạc</li></ul>
+    </div>
+  </details>
+</div>
+
+<div class="exercise">
+  <b>Bài A2.</b> Soạn thảo công thức hóa học sau lên trang web (dùng thẻ chỉ số trên/dưới):
+  <br>C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub> → 6CO<sub>2</sub> + 6H<sub>2</sub>O
+  <br>Lưu tên tệp là <code>HoaHoc.html</code>.
+  <div class="goal">Mục tiêu: luyện thẻ <code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code>.</div>
+  <details>
+    <summary>Xem đáp án</summary>
+    <pre>&lt;p&gt;
+  C&lt;sub&gt;6&lt;/sub&gt;H&lt;sub&gt;12&lt;/sub&gt;O&lt;sub&gt;6&lt;/sub&gt;
+  + 6O&lt;sub&gt;2&lt;/sub&gt;
+  &amp;rarr; 6CO&lt;sub&gt;2&lt;/sub&gt; + 6H&lt;sub&gt;2&lt;/sub&gt;O
+&lt;/p&gt;</pre>
+    <div class="result">C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub> &rarr; 6CO<sub>2</sub> + 6H<sub>2</sub>O</div>
+  </details>
+</div>
+
+<div class="exercise">
+  <b>Bài A3.</b> Tạo một đoạn thơ hoặc câu nói yêu thích, trong đó: dòng đầu tiên được <mark>làm nổi bật (highlight)</mark>, một cụm từ được <b>in đậm</b>, một cụm từ được <i>in nghiêng</i>, dùng thẻ <code>&lt;br&gt;</code> để xuống dòng (không dùng nhiều thẻ <code>&lt;p&gt;</code>). Lưu tên tệp <code>CauNoi.html</code>.
+  <div class="goal">Mục tiêu: luyện các thẻ định dạng văn bản: mark, b, i, br.</div>
+  <details>
+    <summary>Xem đáp án</summary>
+    <pre>&lt;p&gt;
+  &lt;mark&gt;Học, học nữa, học mãi&lt;/mark&gt;&lt;br&gt;
+  Đó là lời dạy của &lt;b&gt;Lê-nin&lt;/b&gt;&lt;br&gt;
+  Hãy luôn &lt;i&gt;cố gắng mỗi ngày&lt;/i&gt; để tiến bộ.
+&lt;/p&gt;</pre>
+    <div class="result">
+      <mark>Học, học nữa, học mãi</mark><br>
+      Đó là lời dạy của <b>Lê-nin</b><br>
+      Hãy luôn <i>cố gắng mỗi ngày</i> để tiến bộ.
+    </div>
+  </details>
+</div>
+
+<h2>PHẦN B - BẢNG, ÂM THANH, VIDEO (MỞ RỘNG)</h2>
+
+<div class="exercise">
+  <b>Bài B1.</b> Tạo bảng thời khóa biểu tuần gồm 5 cột (Thứ, Tiết 1, Tiết 2, Tiết 3, Tiết 4) và 3 dòng dữ liệu (Thứ 2, Thứ 3, Thứ 4). Yêu cầu: bảng có viền (border), độ rộng 600px, căn giữa trang, tiêu đề cột in đậm (dùng <code>&lt;th&gt;</code>). Lưu tên tệp <code>ThoiKhoaBieu.html</code>.
+  <div class="goal">Mục tiêu: luyện thẻ table, tr, th, td và các thuộc tính align/width/border.</div>
+  <details>
+    <summary>Xem đáp án</summary>
+    <pre>&lt;table align="center" width="600" border="1" cellpadding="6" cellspacing="0"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Thứ&lt;/th&gt;&lt;th&gt;Tiết 1&lt;/th&gt;&lt;th&gt;Tiết 2&lt;/th&gt;&lt;th&gt;Tiết 3&lt;/th&gt;&lt;th&gt;Tiết 4&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Thứ 2&lt;/td&gt;&lt;td&gt;Toán&lt;/td&gt;&lt;td&gt;Văn&lt;/td&gt;&lt;td&gt;Anh&lt;/td&gt;&lt;td&gt;Tin&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Thứ 3&lt;/td&gt;&lt;td&gt;Lý&lt;/td&gt;&lt;td&gt;Hóa&lt;/td&gt;&lt;td&gt;Sinh&lt;/td&gt;&lt;td&gt;Sử&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Thứ 4&lt;/td&gt;&lt;td&gt;Địa&lt;/td&gt;&lt;td&gt;GDCD&lt;/td&gt;&lt;td&gt;Thể dục&lt;/td&gt;&lt;td&gt;Tin&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre>
+    <div class="result">
+      <table class="demo" style="width:100%; max-width:600px; margin:auto;">
+        <tr><th>Thứ</th><th>Tiết 1</th><th>Tiết 2</th><th>Tiết 3</th><th>Tiết 4</th></tr>
+        <tr><td>Thứ 2</td><td>Toán</td><td>Văn</td><td>Anh</td><td>Tin</td></tr>
+        <tr><td>Thứ 3</td><td>Lý</td><td>Hóa</td><td>Sinh</td><td>Sử</td></tr>
+        <tr><td>Thứ 4</td><td>Địa</td><td>GDCD</td><td>Thể dục</td><td>Tin</td></tr>
+      </table>
+    </div>
+  </details>
+</div>
+
+<div class="exercise">
+  <b>Bài B2.</b> (Mở rộng - nâng cao) Tạo bảng điểm có 2 dòng đầu là tiêu đề gộp: dòng 1 gồm "STT" và "Họ tên" (dùng <code>rowspan="2"</code>), cột "Điểm" được gộp 2 cột con là "Giữa kỳ" và "Cuối kỳ" (dùng <code>colspan="2"</code> ở dòng 1). Lưu tên tệp <code>BangDiemNangCao.html</code>.
+  <div class="goal">Mục tiêu: luyện kỹ thuật trộn ô rowspan/colspan - kiến thức nâng cao so với bài giảng.</div>
+  <details>
+    <summary>Xem đáp án</summary>
+    <pre>&lt;table border="1" cellpadding="6" style="border-collapse:collapse" align="center"&gt;
+  &lt;tr&gt;
+    &lt;th rowspan="2"&gt;STT&lt;/th&gt;
+    &lt;th rowspan="2"&gt;Họ tên&lt;/th&gt;
+    &lt;th colspan="2"&gt;Điểm&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Giữa kỳ&lt;/th&gt;&lt;th&gt;Cuối kỳ&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;1&lt;/td&gt;&lt;td&gt;Trần Thị B&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre>
+    <div class="result">
+      <table class="demo" style="margin:auto;">
+        <tr><th rowspan="2">STT</th><th rowspan="2">Họ tên</th><th colspan="2">Điểm</th></tr>
+        <tr><th>Giữa kỳ</th><th>Cuối kỳ</th></tr>
+        <tr><td>1</td><td>Trần Thị B</td><td>8</td><td>9</td></tr>
+      </table>
+    </div>
+  </details>
+</div>
+
+<div class="exercise">
+  <b>Bài B3.</b> Tạo trang web giới thiệu "Bài hát yêu thích của tôi", có tiêu đề <code>&lt;h2&gt;</code>, chèn 1 thẻ <code>&lt;audio&gt;</code> có hiển thị thanh điều khiển (controls), hỗ trợ 2 định dạng file (mp3 và ogg). Lưu tên tệp <code>AmNhac.html</code>.
+  <div class="goal">Mục tiêu: luyện thẻ audio, source, thuộc tính controls.</div>
+  <details>
+    <summary>Xem đáp án</summary>
+    <pre>&lt;h2&gt;Bài hát yêu thích của tôi&lt;/h2&gt;
+&lt;audio controls&gt;
+  &lt;source src="baihat.mp3" type="audio/mpeg"&gt;
+  &lt;source src="baihat.ogg" type="audio/ogg"&gt;
+  Trình duyệt của bạn không hỗ trợ thẻ audio.
+&lt;/audio&gt;</pre>
+    <div class="result">(Khi có file âm thanh thật, trình duyệt sẽ hiển thị thanh điều khiển play/pause/volume ở đây.)</div>
+  </details>
+</div>
+
+<div class="exercise">
+  <b>Bài B4.</b> Tạo trang web nhúng 1 video có kích thước 400x300px, tự động tạm dừng (không autoplay), có nút điều khiển, và có ảnh chờ (poster) hiển thị trước khi phát. Lưu tên tệp <code>VideoYeuThich.html</code>.
+  <div class="goal">Mục tiêu: luyện thẻ video và thuộc tính width, height, controls, poster.</div>
+  <details>
+    <summary>Xem đáp án</summary>
+    <pre>&lt;video width="400" height="300" controls poster="anhbia.jpg"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;source src="video.ogg" type="video/ogg"&gt;
+  Trình duyệt của bạn không hỗ trợ thẻ video.
+&lt;/video&gt;</pre>
+    <div class="result">(Khi có file video thật, trình duyệt sẽ hiển thị khung video 400x300 với nút điều khiển.)</div>
+  </details>
+</div>
+
+<h2>PHẦN C - BÀI TẬP TỔNG HỢP (VẬN DỤNG CAO)</h2>
+
+<div class="exercise">
+  <b>Bài C1.</b> <span class="yc">Yêu cầu tổng hợp:</span> Tạo trang web "Hồ sơ học tập" gồm:
+  <ul>
+    <li>Thẻ <code>&lt;meta&gt;</code> khai báo charset UTF-8 và mô tả trang (description)</li>
+    <li>Tiêu đề <code>&lt;h1&gt;</code> "Hồ sơ học tập của [Tên bạn]"</li>
+    <li>Một đường kẻ ngang <code>&lt;hr&gt;</code> phân cách</li>
+    <li>Danh sách có thứ tự <code>&lt;ol&gt;</code> liệt kê 3 môn học yêu thích, dùng kiểu số La Mã (type="I")</li>
+    <li>Một bảng điểm tổng kết gồm 3 cột: Môn học, Điểm, Xếp loại (ít nhất 3 dòng dữ liệu), bảng có border=1, width=700px, căn giữa trang</li>
+  </ul>
+  Lưu tên tệp <code>HoSoHocTap.html</code>.
+  <div class="goal">Mục tiêu: tổng hợp toàn bộ kiến thức Bài 1 - cấu trúc tài liệu, meta, heading, list, table.</div>
+  <details>
+    <summary>Xem đáp án</summary>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="description" content="Hồ sơ học tập cá nhân"&gt;
+  &lt;title&gt;Hồ sơ học tập&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hồ sơ học tập của Nguyễn Văn A&lt;/h1&gt;
+  &lt;hr&gt;
+  &lt;h3&gt;Môn học yêu thích&lt;/h3&gt;
+  &lt;ol type="I"&gt;
+    &lt;li&gt;Tin học&lt;/li&gt;
+    &lt;li&gt;Toán học&lt;/li&gt;
+    &lt;li&gt;Tiếng Anh&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;h3&gt;Bảng điểm tổng kết&lt;/h3&gt;
+  &lt;table align="center" width="700" border="1" cellpadding="6"&gt;
+    &lt;tr&gt;&lt;th&gt;Môn học&lt;/th&gt;&lt;th&gt;Điểm&lt;/th&gt;&lt;th&gt;Xếp loại&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Tin học&lt;/td&gt;&lt;td&gt;9.0&lt;/td&gt;&lt;td&gt;Xuất sắc&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Toán học&lt;/td&gt;&lt;td&gt;8.5&lt;/td&gt;&lt;td&gt;Giỏi&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Tiếng Anh&lt;/td&gt;&lt;td&gt;7.5&lt;/td&gt;&lt;td&gt;Khá&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    <div class="result">
+      <h1 style="margin:0">Hồ sơ học tập của Nguyễn Văn A</h1>
+      <hr>
+      <h3>Môn học yêu thích</h3>
+      <ol type="I"><li>Tin học</li><li>Toán học</li><li>Tiếng Anh</li></ol>
+      <h3>Bảng điểm tổng kết</h3>
+      <table class="demo" style="width:100%;max-width:700px;margin:auto;">
+        <tr><th>Môn học</th><th>Điểm</th><th>Xếp loại</th></tr>
+        <tr><td>Tin học</td><td>9.0</td><td>Xuất sắc</td></tr>
+        <tr><td>Toán học</td><td>8.5</td><td>Giỏi</td></tr>
+        <tr><td>Tiếng Anh</td><td>7.5</td><td>Khá</td></tr>
+      </table>
+    </div>
+  </details>
+</div>
+
+<div class="exercise">
+  <b>Bài C2.</b> (Câu hỏi lý thuyết mở rộng) Trả lời các câu hỏi sau:
+  <ol>
+    <li>Sự khác nhau giữa thẻ <code>&lt;b&gt;</code> và <code>&lt;strong&gt;</code>? Giữa <code>&lt;i&gt;</code> và <code>&lt;em&gt;</code>?</li>
+    <li>Thẻ <code>&lt;!DOCTYPE html&gt;</code> có bắt buộc phải viết đúng vị trí không? Vì sao?</li>
+    <li>Muốn 3 dòng đầu tiên của một bảng có màu nền giống nhau mà không cần lặp lại thuộc tính bgcolor ở từng dòng, ta nên dùng cặp thẻ nào?</li>
+  </ol>
+  <details>
+    <summary>Xem đáp án</summary>
+    <p><b>1.</b> <code>&lt;b&gt;</code> và <code>&lt;i&gt;</code> chỉ có tác dụng định dạng hiển thị (đậm/nghiêng) mà không mang ý nghĩa ngữ nghĩa. <code>&lt;strong&gt;</code> và <code>&lt;em&gt;</code> ngoài việc hiển thị đậm/nghiêng còn mang ý nghĩa nhấn mạnh tầm quan trọng của nội dung, được các công cụ tìm kiếm và trình đọc màn hình (screen reader) chú ý hơn.</p>
+    <p><b>2.</b> Có. Thẻ <code>&lt;!DOCTYPE html&gt;</code> phải luôn đặt ở vị trí đầu tiên, trước tất cả các thẻ khác trong tài liệu, để trình duyệt biết cách hiển thị trang theo đúng chuẩn HTML5 (tránh chế độ "quirks mode").</p>
+    <p><b>3.</b> Dùng thẻ <code>&lt;tbody&gt;</code> để nhóm các dòng đó lại rồi định dạng chung cho <code>&lt;tbody&gt;</code>, hoặc dùng CSS chọn theo nhóm dòng thay vì lặp lại thuộc tính cho từng <code>&lt;tr&gt;</code>.</p>
+  </details>
+</div>
+
+<p style="text-align:center;color:#999;margin-top:40px;font-size:13px;">— Hết —</p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>BÀI 1</title>
+        <link rel="stylesheet" href="">
+        <script src=""></script>
+    </head>
+    <body>
+        Ngày tháng năm sinh:
+        <select id="ngay">
+            <script>
+                for (let i=1; i<=31; i++) {
+                    document.write("<option value='" + i + "'>" + i + "</option>");
+                }
+            </script>
+        </select>
+        tháng:
+        <select id="thang">
+            <script>
+                for (let i=1; i<=12; i++) {
+                    document.write("<option value='" + i + "'>" + i + "</opiton>")
+                }
+            </script>
+        </select>
+        năm:
+        <select id="nam">
+            <script>
+                let namHienTai=new Date().getFullYear();
+                for(let i=1900; i<=namHienTai; i++) {
+                    document.write("<option value='" + i + "'>" + i + "</option>")
+                }
+            </script>
+        </select>
+    </body>
+</html>

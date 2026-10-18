@@ -1,0 +1,22 @@
+div {
+    width:200px;
+    padding:20px 10px;
+    margin:30px 20px; /* ghi 1 applied all, 2 tren duoi, trai phai, 3 tren, trai phai, duoi, 4 theo dong ho */
+    /* margin-top,left,right,... */
+    border:1px solid #000; /* width, style, color */
+}
+a {
+    display:grid;
+    position:relative;
+    top:20px;
+    position:sticky; /* co dinh tren screen khi di chuot di qua */
+    position:fixed; /* co dinh tren screen */
+}
+.card {
+    position:relative
+}
+.text {
+    position:absolute;
+    top:230px;
+    background-color:yellow;
+}

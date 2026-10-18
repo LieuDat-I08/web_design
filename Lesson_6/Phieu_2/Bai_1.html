@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body align="center">
+        a = <input type="text" id="a" name="a">
+        <br>
+        b = <input type="text" id="b" name="b">
+        <br>
+        c = <input type="text" id="c" name="c">
+        <br>
+        <input type="button" value="Giải" onclick="giai()">
+        <br>
+        <span>Kết quả: </span><span id="kq">0</span>
+
+        <script>
+            function giai() {
+                let a=Number(document.getElementById("a").value);
+                let b=Number(document.getElementById("b").value);
+                let c=Number(document.getElementById("c").value);
+                let kq;
+                if(a==0) {
+                    if(b==0) {
+                        kq=(c==0)?"Vô số nghiệm":"Vô nghiệm";
+                        return;
+                    } else {
+                        kq="x = " + (-c/b);
+                        return;
+                    }
+                }
+                let d=b*b-4*a*c;
+                if(d<0) {
+                    kq="Vô nghiệm";
+                } else if(d==0) {
+                    kq="Nghiệm kép: x= " + (-b/(2*a));
+                } else {
+                    let x1=(-b + Math.sqrt(d)) / (2*a);
+                    let x2=(-b - Math.sqrt(d)) / (2*a);
+                    kq="x1 = " + x1 + " x2 = " + x2;
+                }
+                document.getElementById("kq").innerHTML = kq;
+            }
+        </script>
+    </body>
+</html>

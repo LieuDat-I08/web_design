@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>Thực hành</title>
+        <script src=""></script>
+    </head>
+    <body>
+        <p id="abc">Chưa có gì!</p>
+        <script>
+
+            // console.log() chỉ hiện trong "Kiểm tra" -> "Console"
+            console.log("Xin chào");
+            let tuoi=18;
+            if (tuoi>=18) {
+                let thongBao="Đủ tuổi";
+                var ketQua="Được vào";
+            }
+            console.log(ketQua);
+
+            // alert: hiện hộp thoại thông báo
+            let ten = prompt("Tên bạn là: ");
+            alert("Chào " + ten + " nhé!!!");
+
+            // confirm: hỏi có không
+            let a = confirm("Bạn có đẹp trai không?");
+            if (a) {
+                alert("Siêu cấp đẹp trai luôn!");
+            } else {
+                alert("Cũng cũng mà");
+            }
+
+            //viết lệnh html trong js
+            document.write("xin chào");
+
+            // document.getElementById().innerHTML = ""    thay đổi nội dung phần tử (tìm bằng id)
+            document.getElementById("abc").innerHTML = "Có rồi nhé";
+            // .innerHTML = "<b>Hello</b>"    Hello in đậm
+            // .textContent = "<b>Hello</b>"     <b>Hello</b> (văn bản thuần)
+
+
+            // --------------------------------------- BÀI 6 -------------------------------------
+            // oop
+            const toi = {
+                name: lieudat,
+                age: 20
+            }
+
+            // oop vipro
+            function Student(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            const Dat = new Student("Dat", 20);
+            
+            // Object sẵn: Math, Date, ...
+
+            // BOM: alert, cofirm, prompt
+            
+        </script>
+    </body>
+</html>

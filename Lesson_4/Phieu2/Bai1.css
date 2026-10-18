@@ -1,0 +1,16 @@
+h2 {
+    background-color:orange;
+    color:black;
+    border-bottom:3px solid black;
+}
+table {
+    border-collapse:collapse
+}
+table, th, td {
+    border:1px solid rgb(199, 54, 1)
+}
+th {
+    background-color:orangered;
+    color:white;
+    text-align:center;
+}

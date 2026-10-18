@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tổng hợp</title>
+    </head>
+    <body>
+        <form action="/register" method="get" enctype="multipart/form-data">
+            <lable for="fname">Fullname</lable>
+            <input type="text" id="fname" name="fullname"><br>
+            <input type="file" name="avatar"><br>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <input type="reset" id="password" name="password">
+            <label for="date">Sub</label>
+            <input type="date" id="date" name="date">
+            <br><br>
+            <button type="submit">Gửi</button>
+            <button type="reset">Nhập lại</button>
+            <button type="button" onclick="alert('Button clicked!')">
+                <img src="E:\Pictures\Pictures\maxresdefault.jpg" width="50">
+                Click me!
+            </button>
+
+            <br><br>
+            <select id="major" name="major">
+                <option value="it">Công nghệ thông tin</option>
+                <option value="network">Mạng máy tính</option>
+            </select>
+
+            <br>
+            <textarea name="message" rows="5" cols="30"></textarea>
+            <br>
+
+            <input list="browsers" name="browser">
+            <datalist id="browsers">
+                <option value="Chrome"></option>
+                <option value="Firefox"></option>
+            </datalist>
+            <fieldset>
+                <legend>Personalia:</legend>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </body>
+</html>

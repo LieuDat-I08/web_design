@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body align="center">
+        <h3>Giải phương trình bậc nhất hai ẩn</h3>
+        <p>Hãy nhập các giá trị:</p>
+        a = <input type="text" id="a">
+        <br>
+        b = <input type="text" id="b">
+        <br>
+        c = <input type="text" id="c">
+        <br>
+        a' = <input type="text" id="a2">
+        <br>
+        b' = <input type="text" id="b2">
+        <br>
+        c' = <input type="text" id="c2">
+        <br>
+        <input style="margin:15px" type="button" value="Giải" onclick="giai()">
+        <br>
+        <span>Kết quả: </span><span id="kq">-</span>
+
+        <script>
+            function giai() {
+                let a1 = Number(document.getElementById("a").value);
+                let b1 = Number(document.getElementById("b").value);
+                let c1 = Number(document.getElementById("c").value);
+                let a2 = Number(document.getElementById("a2").value);
+                let b2 = Number(document.getElementById("b2").value);
+                let c2 = Number(document.getElementById("c2").value);
+                let D = a1*b2-a2*b1;
+                let Dx = c1*b2-c2*b1;
+                let Dy = a1*c2-a2*c1;
+                let kq;
+                if(D!=0) {
+                    kq="x= " + (Dx/D) + ", y = " + (Dy/D);
+                } else if(Dx==0 && Dy==0) {
+                    kq="Hệ có vô số nghiệm";
+                } else {
+                    kq="Vô nghiệm";
+                }
+                document.getElementById("kq").textContent = kq;
+            }
+        </script>
+    </body>
+</html>

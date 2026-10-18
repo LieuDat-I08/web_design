@@ -1,0 +1,35 @@
+.menu {
+    list-style:none;
+    display:flex;
+    justify-content: center;
+}
+.menu a {
+    background-color:darkblue;
+    text-decoration: none;
+    color:white;
+    padding:12px 20px;
+    border-right:1px solid white;
+    display:block;
+}
+.menu > li:hover > a {
+    background-color:red;
+}
+.menu > li:last-child > a {
+    border-right:none;
+}
+.menu > li {
+    position:relative;
+}
+.submenu {
+    position:absolute;
+    display:none;
+    list-style:none;
+    left:0;
+    width:max-content;
+}
+.menu > li:hover .submenu {
+    display:flex;
+}
+.submenu a:hover {
+    background-color:#990000;
+}

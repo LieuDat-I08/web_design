@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="">
+        <style>
+            button {
+                width:45px;
+                height:38px;
+                font-size:18px;
+                margin:2px;
+            }
+            #man-hinh {
+                width:290px;
+                height:40px;
+                margin:10px auto;
+                border:1px solid #999;
+                font-size:24px;
+                text-align: right;
+                padding-right:8px;
+            }
+            .oSo {
+                text-align: center
+            }
+        </style>
+    </head>
+    <body>
+        <div id="man-hinh">0</div>
+        <div class="oSo">
+            <button onclick="nhapSo(1)">1</button>
+            <button onclick="nhapSo(2)">2</button>
+            <button onclick="nhapSo(3)">3</button>
+            <button onclick="nhapSo(4)">4</button>
+            <button onclick="nhapSo(5)">5</button>
+            <button onclick="chonCong()">+</button>
+        </div>
+        <div class="oSo">
+            <button onclick="nhapSo(6)">6</button>
+            <button onclick="nhapSo(7)">7</button>
+            <button onclick="nhapSo(8)">8</button>
+            <button onclick="nhapSo(9)">9</button>
+            <button onclick="nhapSo(0)">0</button>
+            <button onclick="tinhKetQua()">=</button>
+        </div>
+        <script>
+            let so1=null;
+            let so2=null;
+            let daBamCong=false;
+            const manHinh = document.getElementById("man-hinh");
+
+            function nhapSo(a) {
+                if(!daBamCong) {
+                    so1=a;
+                    manHinh.textContent = so1;
+                } else {
+                    so2=a;
+                    manHinh.textContent = so1 + " + " + so2;
+                }
+            }
+            function chonCong() {
+                if(so1==null) return;
+                daBamCong=true;
+                manHinh.textContent = so1 + "+";
+            }
+            function tinhKetQua() {
+                if(so1==null || so2==null) {
+                    alert("Hãy nhập đủ 2 số!!!");
+                    return;
+                }
+                let kq=so1+so2;
+                manHinh.textContent = so1 + "+" + so2 + "=" + kq;
+                so1=null;
+                so2=null;
+                daBamCong=false;
+            }
+        </script>
+    </body>
+</html>

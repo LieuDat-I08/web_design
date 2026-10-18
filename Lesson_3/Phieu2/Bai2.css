@@ -1,0 +1,16 @@
+h1 {
+    text-align:center;
+    color:#FFCC00;
+}
+* {
+    color:#FFFFFF;
+    font-family:Tahoma;
+}
+body {
+    background-image: url("E:/Pictures/Pictures/67C49BB4-488B-46BB-B154-E3040B96EE80.JPG");
+    background-color:#A06D21;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-attachment: fixed;
+    background-size:25%;
+}

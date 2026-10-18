@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <h2>Thông tin sinh viên</h2>
+        <br>
+        <label for="name">Họ và tên</label>
+        <input type="text" id="name" name="họ và tên">
+        <br>
+        <label for="id">Mã sinh viên</label>
+        <input type="text" id="id" name="mã sinh viên">
+        <br>
+        <label for="class">Lớp</label>
+        <input type="text" id="class" name="lớp">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        <fieldset>
+            <legend>Phần A - Kiến thức HTML (4 điểm)</legend>
+            <br>
+            <p>1. Khai báo nào cho biết tài liệu đang sử dụng HTML5?</p>
+            <br>
+            <input type="radio" id="type" name="khai báo" value="<!DOCTYPE html>">&lt;!DOCTYPE html&gt;
+            <input type="radio" id="type" name="khai báo" value="<html5>">&lt;html5&gt;
+            <input type="radio" id="type" name="khai báo" value="<meta html="5">&lt;meta html="5"&gt;
+            <br>
+            <p>2. Thẻ nào tạo danh sách trống không có thứ tự?</p>
+            <br>
+            <input type="radio" id="tag" name="khai báo" value="<ol>">&lt;ol&gt;
+            <input type="radio" id="tag" name="khai báo" value="<ul>">&lt;ul&gt;
+            <input type="radio" id="tag" name="khai báo" value="<li>">&lt;li&gt;
+            <br>
+            <p>3. Ghép đúng chức năng với thẻ HTML</p>
+            <table width="100%" border="1" align="center" cellspacing="0" cellpadding="7">
+                <tr>
+                    <th align="left">Thẻ</th>
+                    <th align="left">Chức năng</th>
+                </tr>
+                <tr>
+                    <td>&lt;a&gt;</td>
+                    <td>Tạo liên kết</td>
+                </tr>
+                <tr>
+                    <td>&lt;img&gt;</td>
+                    <td>Chèn hình ảnh</td>
+                </tr>
+                <tr>
+                    <td>&lt;table&gt;</td>
+                    <td>Tạo bảng</td>
+                </tr>
+            </table>
+            <br>
+            <p>Theo em, thuộc tính nào của &lt;img&gt; giúp mô tả ảnh khi ảnh không tải được?<input type="text" name="thuộc tính" value="Nhập tên thuộc tính"></p>
+            <br>
+            <p>4. Chọn hai thẻ thường dùng để tạo một dòng và một ô trong bảng.</p>
+            <br>
+            <input type="radio" class="square-radio" name="tag" value="<tr>">&lt;tr&gt;
+            <input type="radio" class="square-radio" name="tag" value="<td>">&lt;td&gt;
+            <input type="radio" class="square-radio" name="tag" value="<br>">&lt;br&gt;
+            <input type="radio" class="square-radio" name="tag" value="<p>">&lt;p&gt;
+        </fieldset>
+        <fieldset>
+            <legend>Phần B - Form HTML(4 điểm)</legend>
+            <br>
+            <p>5. Chọn loại input phù hợp cho từng dữ liệu.</p>
+            <br>
+            <p>Địa chỉ email
+                <select>
+                    <option value="" selected disabled>--Chọn--</option>
+                    <option value="month">Month</option>
+                    <option value="text">Text</option>
+                    <option value="number">Number</option>
+                    <option value="email">Email</option>
+                </select>
+            </p>
+        </fieldset>
+    </body>
+</html>

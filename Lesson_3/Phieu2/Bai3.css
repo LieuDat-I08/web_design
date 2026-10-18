@@ -1,0 +1,17 @@
+h2 {
+    color:green;
+    text-align:center;
+}
+.red {
+    color:red
+}
+.code {
+    background-color:rgb(170, 170, 170);
+    color:rgb(62, 62, 254);
+}
+#tong {
+    margin-left:50%
+}
+.center {
+    margin-left:40%
+}

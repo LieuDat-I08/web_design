@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body align="center">
+        <h3>JavaScript có thể kiểm soát form</h3>
+        <p>Hãy nhập số vào hộp text (từ 1 đến 10):</p>
+        
+        <input type="text" id="so">
+        <input type="button" value="Submit" onclick="check()">
+        <p id="tb"></p>
+        
+        <script>
+            function check() {
+                let so = Number(document.getElementById("so").value);
+                if(so==='' || isNaN(so) || so<1 || so>10) {
+                    document.getElementById("tb").innerHTML = "Dữ liệu không đúng!!!";
+                } else {
+                    document.getElementById("tb").innerHTML = "Dữ liệu đúng!!!";
+                }
+            }
+        </script>
+    </body>
+</html>

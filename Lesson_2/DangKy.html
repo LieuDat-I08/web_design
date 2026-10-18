@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>Đăng ký</title>
+        <style>
+            td {
+                color:#006600
+            }
+        </style>
+    </head>
+    <body>
+        <h2 align="center" style="color:#006600">Phiếu đăng ký tham gia chương trình khuyến mãi</h2>
+        <form action="/register" method="post" enctype="multipart/form-data">
+            <table align="center" width="650px" style="background-color:#ccffcc" border="1" cellspacing="0" cellpadding="7">
+                <tr>
+                    <td>
+                        <label for="name">Họ và tên</label>
+                    </td>
+                    <td>
+                        <input type="text" id="name" name="họ và tên" value="Nguyễn Ngọc Quỳnh Nga">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="address">Địa chỉ</label>
+                    </td>
+                    <td>
+                        <input type="text" id="address" name="địa chỉ" value="2Bia Hùng Vương, Q10">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phone">Điện thoại</label>
+                    </td>
+                    <td>
+                        <input type="text" id="phone" name="số điện thoại" value="0909097506">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gender">Phái</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="gender" name="giới tính" value="Nam"> Nam
+                        <input type="radio" id="gender" name="giới tính" value="Nữ"> Nữ
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="career">Nghề nghiệp</label>
+                    </td>
+                    <td>
+                        <select id="career" name="nghề nghiệp">
+                            <option value="giáo viên" selected>Giáo viên</option>
+                            <option value="học sinh">Học sinh</option>
+                            <option value="kỹ sư">Kỹ sư</option>
+                            <option value="bác sĩ">Bác sĩ</option>
+                            <option value="khác">Khác</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="productselected">Chọn sản phẩm tham gia</label>
+                    </td>
+                    <td>
+                        <select name="sản phẩm" multiple size="4">
+                            <option value="kem đánh rằng">Kem đánh răng</option>
+                            <option value="bột giặt">Bột giặt</option>
+                            <option value="dầu gội đầu">Dầu gội đầu</option>
+                            <option value="sữa tắm">Sữa tắm</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="people">Số người dự đoán tham gia</label>
+                    </td>
+                    <td>
+                        <input type="text" id="people" name="người dự đoán tham gia" value="250000">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" colspan=2>
+                        <button type="submit">Đồng ý</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
